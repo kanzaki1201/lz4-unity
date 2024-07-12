@@ -10,6 +10,10 @@ This is a C# wrapper for Unity to use [lz4](https://github.com/lz4/lz4/) compres
 
 *cmake is required*
 
+1. Clone this repo
+2. `cd` into the repo, then run `git submodule update --init --recursive` to get `lz4`
+3. `cd` into `build` 
+
 Under `build` folder there are:
 
 * `make_osx.sh` Build for macOS. Xcode is required.
@@ -17,6 +21,10 @@ Under `build` folder there are:
 * `make_android.sh` Build for android. NDK is required and there should be an environment variable `ANDROID_NDK` points to NDK root.
 * `make_win.bat` Build for windows. VS 2015, or above, is required.
 * `make_linux.sh` Build for Linux. 
+
+For Linux builds:
+1. `cmake -G "Unix Makefiles"`
+2. `cmake --build . --config Debug`
 
 
 # How to use
